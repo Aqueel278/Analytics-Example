@@ -13,6 +13,7 @@ namespace AnalyticsExample.Controllers
 		protected override void OnActionExecuting(ActionExecutingContext filterContext)
 		{
 			RavenSession = (IDocumentSession)HttpContext.Items["CurrentRequestRavenSession"];
+			Response.Write("Started");
 		}
 	}
 }
